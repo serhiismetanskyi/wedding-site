@@ -287,10 +287,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #5A4A3F;
 }
 
-/* Білий колір для конкретних пунктів меню */
+/* White color for specific menu items */
 #qbootstrap-header #navbar li a[data-nav-section="wedding-day"] span,
 #qbootstrap-header #navbar li a[data-nav-section="groom-bride"] span,
 #qbootstrap-header #navbar li a[data-nav-section="when-where"] span {
+  color: #fff !important;
+}
+
+/* White color for menu on generator page */
+#qbootstrap-header #navbar li a span {
   color: #fff !important;
 }
 
