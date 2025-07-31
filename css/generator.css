@@ -1,0 +1,296 @@
+/* Generator Page Styles */
+
+.qbootstrap-generator {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.qbootstrap-generator .container {
+    text-align: center !important;
+}
+
+.qbootstrap-generator .row {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.qbootstrap-generator .col-md-8.col-md-offset-2 {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* Generator header styles */
+.generator-header {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.generator-header h2 {
+    font-size: 36px;
+    color: #FF847C;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.generator-header p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.generator-form {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.generator-form .form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.generator-form .form-control:focus {
+    border-color: #FF847C;
+    box-shadow: 0 0 0 0.2rem rgba(255, 132, 124, 0.25);
+}
+
+.generator-btn {
+    background: linear-gradient(135deg, #FF847C 0%, #E84A5F 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 132, 124, 0.3);
+}
+
+.generator-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 132, 124, 0.4);
+    color: white;
+}
+
+.generator-btn:active {
+    transform: translateY(0);
+}
+
+.result-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+.result-link {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    word-break: break-all;
+    margin: 20px 0;
+}
+
+.copy-btn, .share-btn {
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.copy-btn {
+    background: #28a745;
+    border-color: #28a745;
+}
+
+.copy-btn:hover {
+    background: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-1px);
+}
+
+.share-btn {
+    background: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.share-btn:hover {
+    background: #138496;
+    border-color: #117a8b;
+    transform: translateY(-1px);
+}
+
+.success-message {
+    color: #FF847C;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Mobile Adaptations */
+@media (max-width: 768px) {
+    .generator-header {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .generator-form {
+        padding: 25px 20px;
+        margin: 0 10px 20px 10px;
+    }
+    
+    .generator-form .form-control {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    .generator-btn {
+        padding: 12px 30px;
+        font-size: 16px;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .result-container {
+        padding: 20px;
+        margin: 20px 10px 0 10px;
+    }
+    
+    .result-link {
+        font-size: 12px;
+        padding: 12px;
+    }
+    
+    .copy-btn, .share-btn {
+        width: 100%;
+        margin: 5px 0;
+        padding: 15px;
+    }
+    
+    .success-message {
+        font-size: 18px;
+    }
+    
+    .generator-header h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .generator-header p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .qbootstrap-generator {
+        padding: 60px 0;
+    }
+    
+    .generator-header {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .generator-form {
+        padding: 20px 15px;
+    }
+    
+    .generator-form .form-control {
+        font-size: 14px;
+        padding: 12px;
+    }
+    
+    .generator-btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+    
+    .result-container {
+        padding: 15px;
+    }
+    
+    .result-link {
+        font-size: 11px;
+        padding: 10px;
+    }
+    
+    .success-message {
+        font-size: 16px;
+    }
+    
+        .generator-header h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .generator-header p {
+        font-size: 14px;
+    }
+}
+
+/* Animation for result appearance */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.result-container {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #FF847C;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success animation */
+.success-animation {
+    animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+} 
