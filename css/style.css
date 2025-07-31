@@ -68,12 +68,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 0.6em;
-  }
   #qbootstrap-header {
     margin-top: 0;
     background: #fff;
@@ -272,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   .section-heading h2 {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 .section-heading h3 {
@@ -291,14 +285,14 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (max-width: 768px) {
   .section-heading p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.4;
   }
 }
 @media screen and (max-width: 768px) {
   .section-heading h3 {
-    font-size: 24px !important;
-    line-height: 34px;
+    font-size: 20px !important;
+    line-height: 28px;
   }
 }
 
@@ -465,7 +459,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .qbootstrap-cover .display-tc h2,
   .video-hero .display-tc h2 {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 .qbootstrap-cover .display-tc p,
@@ -557,7 +551,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-slider-hero .flexslider .slider-text > .slider-text-inner h1 {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 #qbootstrap-slider-hero .flexslider .slider-text > .slider-text-inner .holder {
@@ -652,7 +646,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-couple h3 {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 #qbootstrap-couple span {
@@ -713,7 +707,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-countdown .section-heading h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 #qbootstrap-countdown .section-heading .datewed {
@@ -754,6 +748,32 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
   letter-spacing: 10px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-countdown .countdown {
+    font-size: 50px;
+  }
+  #qbootstrap-countdown .countdown span {
+    margin: 0 15px;
+  }
+  #qbootstrap-countdown .countdown small {
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #qbootstrap-countdown .countdown {
+    font-size: 35px;
+  }
+  #qbootstrap-countdown .countdown span {
+    margin: 0 8px;
+  }
+  #qbootstrap-countdown .countdown small {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
 }
 #qbootstrap-countdown .display-over {
   z-index: 2;
@@ -1039,7 +1059,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-testimonials .section-heading h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 #qbootstrap-testimonials .section-heading.svg-sm .svg {
@@ -1176,6 +1196,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
 }
+@media screen and (max-width: 768px) {
+  .groom-men h3 {
+    font-size: 20px;
+  }
+}
 
 .wedding-events {
   background: #fff;
@@ -1270,7 +1295,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-started .section-heading h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 #qbootstrap-started .section-heading h3 {
