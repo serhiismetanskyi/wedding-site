@@ -4,7 +4,7 @@
 function transliterateToCyrillic(text) {
     var latin = {
         'a': 'а', 'b': 'б', 'v': 'в', 'h': 'г', 'g': 'ґ', 'd': 'д', 'e': 'е', 'ye': 'є',
-        'zh': 'ж', 'z': 'з', 'y': 'и', 'i': 'і', 'yi': 'ї', 'k': 'к', 'l': 'л',
+        'zh': 'ж', 'z': 'з', 'y': 'и', 'i': 'і', 'yi': 'ї', 'iy': 'й', 'k': 'к', 'l': 'л',
         'm': 'м', 'n': 'н', 'o': 'о', 'p': 'п', 'r': 'р', 's': 'с', 't': 'т', 'u': 'у',
         'f': 'ф', 'kh': 'х', 'ts': 'ц', 'ch': 'ч', 'sh': 'ш', 'shch': 'щ',
         'yu': 'ю', 'ya': 'я', 'j': 'ь',
@@ -12,7 +12,7 @@ function transliterateToCyrillic(text) {
         'Zh': 'Ж', 'Z': 'З', 'Y': 'И', 'I': 'І', 'Yi': 'Ї', 'K': 'К', 'L': 'Л',
         'M': 'М', 'N': 'Н', 'O': 'О', 'P': 'П', 'R': 'Р', 'S': 'С', 'T': 'Т', 'U': 'У',
         'F': 'Ф', 'Kh': 'Х', 'Ts': 'Ц', 'Ch': 'Ч', 'Sh': 'Ш', 'Shch': 'Щ',
-        'Yu': 'Ю', 'Ya': 'Я', 'J': 'Ь'
+        'Yu': 'Ю', 'Ya': 'Я', 'J': 'Ь', 'Y': 'И'
     };
     
     // Handle special cases first
@@ -28,20 +28,25 @@ function transliterateToCyrillic(text) {
     text = text.replace(/Ch/g, 'Ч');
     text = text.replace(/sh/g, 'ш');
     text = text.replace(/Sh/g, 'Ш');
-    text = text.replace(/yu/g, 'ю');
-    text = text.replace(/Yu/g, 'Ю');
-    text = text.replace(/ya/g, 'я');
-    text = text.replace(/Ya/g, 'Я');
+            text = text.replace(/yu/g, 'ю');
+        text = text.replace(/Yu/g, 'Ю');
+        text = text.replace(/ya/g, 'я');
+        text = text.replace(/Ya/g, 'Я');
+        text = text.replace(/y/g, 'и');
+        text = text.replace(/Y/g, 'И');
     text = text.replace(/ye/g, 'є');
     text = text.replace(/Ye/g, 'Є');
-    text = text.replace(/yi/g, 'ї');
-    text = text.replace(/Yi/g, 'Ї');
-    text = text.replace(/sj/g, 'сь');
+            text = text.replace(/yi/g, 'ї');
+        text = text.replace(/Yi/g, 'Ї');
+        text = text.replace(/iy/g, 'й');
+        text = text.replace(/Iy/g, 'Й');
+        text = text.replace(/sj/g, 'сь');
     text = text.replace(/Sj/g, 'Сь');
     text = text.replace(/j/g, 'ь');
     text = text.replace(/J/g, 'Ь');
-    text = text.replace(/ap/g, "'");
-    text = text.replace(/Ap/g, "'");
+            text = text.replace(/ap/g, "'");
+        text = text.replace(/Ap/g, "'");
+
     
     // Handle single characters
     var result = text.split('').map(function(char) {
@@ -57,7 +62,7 @@ function transliterateToCyrillic(text) {
 function transliterateToLatin(text) {
     var cyrillic = {
         'а': 'a', 'б': 'b', 'в': 'v', 'г': 'h', 'ґ': 'g', 'д': 'd', 'е': 'e', 'є': 'ye',
-        'ж': 'zh', 'з': 'z', 'и': 'y', 'і': 'i', 'ї': 'yi', 'й': 'y', 'к': 'k', 'л': 'l',
+        'ж': 'zh', 'з': 'z', 'и': 'y', 'і': 'i', 'ї': 'yi', 'й': 'iy', 'к': 'k', 'л': 'l',
         'м': 'm', 'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
         'ф': 'f', 'х': 'kh', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'shch', 'ь': 'j',
         "'": "'", // Keep apostrophe as apostrophe
@@ -73,6 +78,8 @@ function transliterateToLatin(text) {
     // Handle special cases first
     text = text.replace(/сь/g, 'sj');
     text = text.replace(/Сь/g, 'Sj');
+    text = text.replace(/й/g, 'iy');
+    text = text.replace(/Й/g, 'Iy');
     
     return text.split('').map(function(char) {
         return cyrillic[char] || char;
@@ -210,4 +217,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // Focus on input when page loads
         input.focus();
     }
-});
+}); 
