@@ -15,6 +15,8 @@ function transliterateToCyrillic(text) {
     };
     
     // Handle multi-character combinations first (before single characters)
+    text = text.replace(/siya/g, 'сія');
+    text = text.replace(/Siya/g, 'Сія');
     text = text.replace(/iy/g, 'й');
     text = text.replace(/Iy/g, 'Й');
     text = text.replace(/yi/g, 'ї');
@@ -73,6 +75,8 @@ function transliterateToLatin(text) {
     };
     
     // Handle special cases first
+    text = text.replace(/сія/g, 'siya');
+    text = text.replace(/Сія/g, 'Siya');
     text = text.replace(/сь/g, 'sj');
     text = text.replace(/Сь/g, 'Sj');
     text = text.replace(/й/g, 'iy');
