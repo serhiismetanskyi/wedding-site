@@ -8,7 +8,6 @@ function transliterateToCyrillic(text) {
         'm': 'м', 'n': 'н', 'o': 'о', 'p': 'п', 'r': 'р', 's': 'с', 't': 'т', 'u': 'у',
         'f': 'ф', 'kh': 'х', 'ts': 'ц', 'ch': 'ч', 'sh': 'ш', 'shch': 'щ',
         'yu': 'ю', 'ya': 'я', 'j': 'ь',
-        "'": 'ь',
         'A': 'А', 'B': 'Б', 'V': 'В', 'H': 'Г', 'G': 'Ґ', 'D': 'Д', 'E': 'Е', 'Ye': 'Є',
         'Zh': 'Ж', 'Z': 'З', 'Y': 'И', 'I': 'І', 'Yi': 'Ї', 'K': 'К', 'L': 'Л',
         'M': 'М', 'N': 'Н', 'O': 'О', 'P': 'П', 'R': 'Р', 'S': 'С', 'T': 'Т', 'U': 'У',
@@ -39,6 +38,10 @@ function transliterateToCyrillic(text) {
     text = text.replace(/Yi/g, 'Ї');
     text = text.replace(/sj/g, 'сь');
     text = text.replace(/Sj/g, 'Сь');
+    text = text.replace(/j/g, 'ь');
+    text = text.replace(/J/g, 'Ь');
+    text = text.replace(/ap/g, "'");
+    text = text.replace(/Ap/g, "'");
     
     // Handle single characters
     var result = text.split('').map(function(char) {
@@ -56,8 +59,7 @@ function transliterateToLatin(text) {
         'а': 'a', 'б': 'b', 'в': 'v', 'г': 'h', 'ґ': 'g', 'д': 'd', 'е': 'e', 'є': 'ye',
         'ж': 'zh', 'з': 'z', 'и': 'y', 'і': 'i', 'ї': 'yi', 'й': 'y', 'к': 'k', 'л': 'l',
         'м': 'm', 'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u',
-        'ф': 'f', 'х': 'kh', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'shch', 'ь': 'j',
-        'ь': "'",
+        'ф': 'f', 'х': 'kh', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'shch', 'ь': "'",
         'сь': 'sj', 'Сь': 'Sj',
         'ю': 'yu', 'я': 'ya',
         'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'H', 'Ґ': 'G', 'Д': 'D', 'Е': 'E', 'Є': 'Ye',
@@ -66,6 +68,10 @@ function transliterateToLatin(text) {
         'Ф': 'F', 'Х': 'Kh', 'Ц': 'Ts', 'Ч': 'Ch', 'Ш': 'Sh', 'Щ': 'Shch', 'Ь': 'J',
         'Ю': 'Yu', 'Я': 'Ya'
     };
+    
+    // Handle special cases first
+    text = text.replace(/сь/g, 'sj');
+    text = text.replace(/Сь/g, 'Sj');
     
     return text.split('').map(function(char) {
         return cyrillic[char] || char;
@@ -76,6 +82,7 @@ function transliterateToLatin(text) {
 function createCleanUrl(name) {
     return transliterateToLatin(name)
         .toLowerCase()
+        .replace(/'/g, 'ap') // Replace apostrophes with 'ap'
         .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
         .replace(/\s+/g, '-') // Replace spaces with hyphens
         .replace(/-+/g, '-') // Replace multiple hyphens with single
