@@ -15,6 +15,10 @@ function transliterateToCyrillic(text) {
     };
     
     // Handle multi-character combinations first (before single characters)
+    text = text.replace(/toriya/g, 'торія');
+    text = text.replace(/Toriya/g, 'Торія');
+    text = text.replace(/iivna/g, 'іївна');
+    text = text.replace(/Iivna/g, 'Іївна');
     text = text.replace(/liya/g, 'лія');
     text = text.replace(/Liya/g, 'Лія');
     text = text.replace(/siya/g, 'сія');
@@ -77,6 +81,10 @@ function transliterateToLatin(text) {
     };
     
     // Handle special cases first
+    text = text.replace(/торія/g, 'toriya');
+    text = text.replace(/Торія/g, 'Toriya');
+    text = text.replace(/іївна/g, 'iivna');
+    text = text.replace(/Іївна/g, 'Iivna');
     text = text.replace(/лія/g, 'liya');
     text = text.replace(/Лія/g, 'Liya');
     text = text.replace(/сія/g, 'siya');
